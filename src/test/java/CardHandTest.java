@@ -18,4 +18,6 @@ public class CardHandTest {
        assertEquals("Diamonds", actualCardSuit);
 
     }
+
+    //TODO: to check the length of the array in the CardHand class.
 }

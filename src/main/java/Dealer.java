@@ -5,13 +5,14 @@ public class Dealer {
 
 
     private ArrayList<Deck> decks;
+    private DeckGenerator deckGenerator;
     private CardHand dealerCardHand;
 
     public Dealer(){
         this.decks = new ArrayList<>();
-        DeckGenerator deckGenerator = new DeckGenerator();
+        this.deckGenerator = new DeckGenerator();
         this.decks.add(deckGenerator.makeADeck());
-        shuffleAllDecks();
+
     }
 
     public ArrayList<Deck> getDecks() {
@@ -32,18 +33,19 @@ public class Dealer {
         }
     }
 
+
   public Card getCardOnTopOfDeck(){
 
-        Card card = decks.get(0).getDeck().remove(0);
+        Card firstCard = decks.get(0).getDeck().remove(0);
 
-        return card;
+//      System.out.println("First card" + firstCard);
 
-
+        return firstCard;
 
   }
 
 
-
+  public
 
 
 

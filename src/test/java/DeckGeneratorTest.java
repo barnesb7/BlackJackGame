@@ -29,6 +29,7 @@ public class DeckGeneratorTest {
        assertEquals(expectedFirstCard.getSuit(), actualFirstCardSuit);
     }
 
+
     @Test
     public void testsDeckLength(){
         Deck actualDeckReturned = testDeckGenerator.makeADeck();
