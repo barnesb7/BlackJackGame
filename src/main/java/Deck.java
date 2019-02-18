@@ -5,9 +5,7 @@ public class Deck {
     private ArrayList<Card> deck;
 
     public Deck (){
-
         this.deck = new ArrayList<>();
-
     }
 
     public ArrayList<Card> getDeck() {
@@ -18,10 +16,5 @@ public class Deck {
         this.deck = deck;
     }
 
-    @Override
-    public String toString() {
-        return "Deck{" +
-                "deck=" + deck +
-                '}';
-    }
+
 }

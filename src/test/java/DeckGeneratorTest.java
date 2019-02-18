@@ -13,7 +13,6 @@ public class DeckGeneratorTest {
     @Before
     public void create(){
         testDeckGenerator = new DeckGenerator();
-        Deck testDeck = new Deck();
     }
 
     @Test
@@ -28,5 +27,12 @@ public class DeckGeneratorTest {
 
        assertEquals(expectedFirstCard.getRank(), actualFirstCardRank);
        assertEquals(expectedFirstCard.getSuit(), actualFirstCardSuit);
+    }
+
+    @Test
+    public void testsDeckLength(){
+        Deck actualDeckReturned = testDeckGenerator.makeADeck();
+
+        assertEquals(52, actualDeckReturned.getDeck().size());
     }
 }
