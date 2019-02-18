@@ -7,15 +7,18 @@ public class Player {
     private int amountOfChips;
     private CardHand cardHand;
 
-    public Player(String playerName, int moneyInWallet, int amountOfChips, CardHand cardHand) {
+    public Player(String playerName, int moneyInWallet, int amountOfChips) {
         this.playerName = playerName;
         this.moneyInWallet = moneyInWallet;
         this.amountOfChips = amountOfChips;
-        this.cardHand = cardHand;
+        this.cardHand =  new CardHand();
     }
 
     public Player(String name, int moneyInWallet){
-        this.playerName = playerName;
+        this.playerName = name;
+        this.moneyInWallet = moneyInWallet;
+        this.cardHand = new CardHand();
+
     }
 
     public String getPlayerName() {

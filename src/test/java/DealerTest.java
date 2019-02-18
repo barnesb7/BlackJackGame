@@ -9,10 +9,12 @@ import static org.junit.Assert.*;
 public class DealerTest {
 
     private Dealer testDealer;
+    private Player playa1;
 
     @Before
     public void create(){
         testDealer = new Dealer();
+        playa1 = new Player("Brian", 1000);
     }
 
     @Test
@@ -34,16 +36,18 @@ public class DealerTest {
        assertEquals("Two", actualCardRank);
        assertEquals("Clubs", actualCardSuit);
 
-//        String actualCardSuit2 = testDealer.getCardOnTopOfDeck().getSuit();
-//        String actualCardRank2 = testDealer.getCardOnTopOfDeck().getRank();
-//
-//        assertEquals("Three", actualCardRank2);
-//        assertEquals("Clubs", actualCardSuit2);
-
     }
 
 
+    @Test
+    public void shouldDealInitialHands(){
 
+        testDealer.dealInitialHands(playa1);
+
+        assertEquals(2, testDealer.getDealerCardHand().getHand().size());
+        assertEquals(2, playa1.getCardHand().getHand().size());
+
+    }
 
 
 

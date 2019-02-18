@@ -12,7 +12,16 @@ public class Dealer {
         this.decks = new ArrayList<>();
         this.deckGenerator = new DeckGenerator();
         this.decks.add(deckGenerator.makeADeck());
+        this.dealerCardHand = new CardHand();
 
+    }
+
+    public DeckGenerator getDeckGenerator() {
+        return deckGenerator;
+    }
+
+    public CardHand getDealerCardHand() {
+        return dealerCardHand;
     }
 
     public ArrayList<Deck> getDecks() {
@@ -45,7 +54,15 @@ public class Dealer {
   }
 
 
-  public
+  public void dealInitialHands(Player playa1){
+
+        for(int i = 0; i < 2; i++){
+          playa1.getCardHand().addCardToHand(getCardOnTopOfDeck());
+          dealerCardHand.addCardToHand(getCardOnTopOfDeck());
+      }
+
+
+  }
 
 
 
