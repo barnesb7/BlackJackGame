@@ -57,11 +57,19 @@ public class Dealer {
   public void dealInitialHands(Player playa1){
 
         for(int i = 0; i < 2; i++){
-          playa1.getCardHand().addCardToHand(getCardOnTopOfDeck());
-          dealerCardHand.addCardToHand(getCardOnTopOfDeck());
-      }
+            dealCardForPlayerHit(playa1);
+            dealCardForDealerHit();
+        }
 
 
+  }
+
+  public void dealCardForPlayerHit(Player playa1){
+      playa1.getCardHand().addCardToHand(getCardOnTopOfDeck());
+  }
+
+  public void dealCardForDealerHit(){
+      dealerCardHand.addCardToHand(getCardOnTopOfDeck());
   }
 
 

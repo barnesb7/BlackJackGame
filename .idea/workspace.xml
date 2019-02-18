@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a8f3ab4-36c6-4b4b-8ad0-36e1f5eadf8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Dealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Dealer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/DealerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/DealerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DealerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DealerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -61,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dealer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+            <state relative-caret-position="373">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#457#458#0" expanded="true" />
@@ -76,6 +70,10 @@
                 <element signature="e#293#294#0" expanded="true" />
                 <element signature="e#344#345#0" expanded="true" />
                 <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1493#1494#0" expanded="true" />
+                <element signature="e#1530#1531#0" expanded="true" />
+                <element signature="e#1592#1593#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/DealerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="343">
+              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -268,7 +266,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550524165086" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550525273892" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -364,23 +362,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550503302327</updated>
-      <workItem from="1550503306553" duration="12846000" />
+      <workItem from="1550503306553" duration="13979000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 00m 54s.xml">
-      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 02m 03s.xml">
-      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 04m 29s.xml">
-      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 05m 07s.xml">
-      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 05m 17s.xml">
       <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
     </history-entry>
@@ -399,9 +385,21 @@
     <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 08m 16s.xml">
       <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 09m 17s.xml">
+      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 09m 26s.xml">
+      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 11m 10s.xml">
+      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DealerTest_shouldDealInitialHands - 2019.02.18 at 16h 27m 55s.xml">
+      <configuration name="DealerTest.shouldDealInitialHands" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12846000" />
+    <option name="totallyTimeSpent" value="13979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="23" width="1440" height="812" extended-state="0" />
@@ -602,6 +600,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DealerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -629,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dealer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        <state relative-caret-position="373">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#457#458#0" expanded="true" />
@@ -641,16 +649,10 @@
             <element signature="e#293#294#0" expanded="true" />
             <element signature="e#344#345#0" expanded="true" />
             <element signature="e#378#379#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DealerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1592#1593#0" expanded="true" />
           </folding>
         </state>
       </provider>
