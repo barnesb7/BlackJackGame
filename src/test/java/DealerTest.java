@@ -14,7 +14,7 @@ public class DealerTest {
     @Before
     public void create(){
         testDealer = new Dealer();
-        playa1 = new Player("Brian", 1000);
+        playa1 = new Player("Brian");
     }
 
     @Test

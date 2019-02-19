@@ -25,7 +25,7 @@ public class WalletTest {
     @Test
     public void shouldAddWinningsChips(){
 
-        testWallet.addWinningsChips(10);
+        testWallet.addWinningsChips(100);
 
         int actualChips = testWallet.getChips();
 
@@ -51,5 +51,6 @@ public class WalletTest {
 
         assertEquals(8, actualChipsAfterLoss);
     }
+
 
 }

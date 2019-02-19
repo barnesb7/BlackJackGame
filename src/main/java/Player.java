@@ -3,22 +3,17 @@ import java.util.ArrayList;
 public class Player {
 
     private String playerName;
-    private int moneyInWallet;
-    private int amountOfChips;
+    private Wallet wallet;
     private CardHand cardHand;
 
-    public Player(String playerName, int moneyInWallet, int amountOfChips) {
+    public Player(String playerName) {
         this.playerName = playerName;
-        this.moneyInWallet = moneyInWallet;
-        this.amountOfChips = amountOfChips;
+        this.wallet = new Wallet();
         this.cardHand =  new CardHand();
     }
 
-    public Player(String name, int moneyInWallet){
-        this.playerName = name;
-        this.moneyInWallet = moneyInWallet;
-        this.cardHand = new CardHand();
-
+    public Wallet getWallet() {
+        return wallet;
     }
 
     public String getPlayerName() {
@@ -29,21 +24,6 @@ public class Player {
         this.playerName = playerName;
     }
 
-    public int getMoneyInWallet() {
-        return moneyInWallet;
-    }
-
-    public void setMoneyInWallet(int moneyInWallet) {
-        this.moneyInWallet = moneyInWallet;
-    }
-
-    public int getAmountOfChips() {
-        return amountOfChips;
-    }
-
-    public void setAmountOfChips(int amountOfChips) {
-        this.amountOfChips = amountOfChips;
-    }
 
     public CardHand getCardHand() {
         return cardHand;
