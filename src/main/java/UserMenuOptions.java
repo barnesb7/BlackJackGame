@@ -23,7 +23,7 @@ public class UserMenuOptions {
                 "        ;         ,'                                           \n" +
                 "       /         /                                             \n" +
                 "      /         /                                              \n" +
-                "               / SSt                                           ");
+                "               /                                            ");
 
     }
 
@@ -36,8 +36,6 @@ public class UserMenuOptions {
         String playerName = scan.nextLine();
 
         return playerName;
-
-
     }
 
     public Player createNewPlayer(String name){
@@ -45,6 +43,15 @@ public class UserMenuOptions {
         Player player = new Player(name);
 
         return player;
+    }
+
+    public double askForInitialBet(){
+
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is your initial bet sucka? (it's helpful if its in units of 10.00 USD)");
+        return scanner.nextDouble();
     }
 }
 

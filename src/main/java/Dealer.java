@@ -61,8 +61,8 @@ public class Dealer {
             dealCardForDealerHit();
         }
 
-
   }
+
 
   public void dealCardForPlayerHit(Player playa1){
       playa1.getCardHand().addCardToHand(getCardOnTopOfDeck());
