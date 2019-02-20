@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class UserMenuOptions {
@@ -52,6 +53,17 @@ public class UserMenuOptions {
 
         System.out.println("What is your initial bet sucka? (it's helpful if its in units of 10.00 USD)");
         return scanner.nextDouble();
+    }
+
+    public String hitOrStayOption(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("[1] get a hit \n" +
+                            "[2] stay\n" +
+                            "[3] fold \n");
+
+        return scanner.nextLine();
+
     }
 }
 
