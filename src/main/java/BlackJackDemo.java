@@ -23,6 +23,10 @@ public class BlackJackDemo {
         dealer.getDealerCardHand().showDealerHidden2ndCard();
         playa1.getCardHand().showPlayerHand();
 
+        playa1.getCardHand().sumCardHand();
+        dealer.getDealerCardHand().sumCardHand();
+
+
     }
 
 }

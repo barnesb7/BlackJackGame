@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class CardHand {
 
-    private int totalScore;
+    private int totalHandSum;
 
     private ArrayList<Card> hand;
 
@@ -37,6 +37,49 @@ public class CardHand {
 
     }
 
+
+    public void sumCardHand() {
+
+        int cardSum = 0;
+
+        for (Card card : hand) {
+            cardSum += getCardNumericalValue(card.getRank());
+        }
+         setTotalHandSum(cardSum);
+
+    }
+
+        private int getCardNumericalValue(String rank){
+
+            int card = 0;
+
+
+            if(rank.equalsIgnoreCase("jack")){
+
+                card = 10;
+
+            } else if(rank.equalsIgnoreCase("queen")){
+                card =10;
+
+            } else if (rank.equalsIgnoreCase("king")){
+
+                card =10;
+
+            } else if(rank.equalsIgnoreCase("ace")){
+                card = 11;
+            }
+            else {
+
+                card = Integer.parseInt(rank);
+            }
+
+            return card;
+
+        }
+
+
+
+
     public ArrayList<Card> getHand() {
         return hand;
     }
@@ -45,18 +88,19 @@ public class CardHand {
         this.hand = hand;
     }
 
-    public int getTotalScore() {
-        return totalScore;
-    }
 
-    public void setTotalScore(int totalScore) {
-        this.totalScore = totalScore;
-    }
 
     public void addCardToHand(Card card1){
         this.hand.add(card1);
     }
 
+    public int getTotalHandSum() {
+        return totalHandSum;
+    }
+
+    public void setTotalHandSum(int totalHandSum) {
+        this.totalHandSum = totalHandSum;
+    }
 
 
 //    public void sumHandTotalScore(){

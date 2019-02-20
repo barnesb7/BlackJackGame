@@ -24,6 +24,10 @@ public class Dealer {
         return dealerCardHand;
     }
 
+    public void setDealerCardHand(CardHand dealerCardHand) {
+        this.dealerCardHand = dealerCardHand;
+    }
+
     public ArrayList<Deck> getDecks() {
         return decks;
     }
