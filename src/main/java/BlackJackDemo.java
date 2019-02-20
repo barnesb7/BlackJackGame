@@ -27,6 +27,7 @@ public class BlackJackDemo {
 
                     double initialBet = menuOptions.askForInitialBet();
                     playa1.setCardHand(new CardHand());
+                    dealer.setDealerCardHand(new CardHand());
                     dealer.dealInitialHands(playa1);
 
                     dealer.getDealerCardHand().showDealerHidden2ndCard();
@@ -110,14 +111,14 @@ public class BlackJackDemo {
                 case "2":
 
                     System.out.println(playa1.getWallet());
-                    System.out.println("Converting" + playa1.getWallet().getChips() + " to cash");
+                    System.out.println("Converting " + playa1.getWallet().getChips() + " chips to cash");
                     playa1.getWallet().addCashMoney(playa1.getWallet().getChips());
                     System.out.println(playa1.getWallet());
                     continueGame = false;
                     break;
 
                 case "3":
-                    System.out.println("Thanks for visiting G-Boomin's Black Jack Casino," + playerName);
+                    System.out.println("Thanks for visiting G-Boomin's Black Jack Casino, " + playerName);
                     continueGame = false;
                     break;
 

@@ -32,7 +32,7 @@ public class UserMenuOptions {
 
     public String returnPlayersName(){
         Scanner scan= new Scanner (System.in);
-        System.out.println("Welcome to the All 'Merican BadA$$ Black Jack table");
+        System.out.println("Welcome to the G-Boomin's Black Jack casino");
         System.out.println("What is your name?");
         String playerName = scan.nextLine();
 
