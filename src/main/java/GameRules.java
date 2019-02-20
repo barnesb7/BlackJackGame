@@ -20,9 +20,15 @@ public String checkAllPlayersHandsForTwentyOne(Player playa1, Dealer dealer){
 }
 
 
+public void dealerDealsOwnHandWhenUnderSeventeen(Dealer dealer){
+    dealer.dealOwnHandUnderSeventeen();
+}
+
 
 private boolean checkCardHandForTwentyOne(int handTotal){
     return handTotal == 21;
 }
+
+
 
 }

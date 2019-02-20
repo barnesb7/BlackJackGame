@@ -65,5 +65,10 @@ public class UserMenuOptions {
         return scanner.nextLine();
 
     }
+
+    public void hitStayOrFold(){
+
+
+    }
 }
 

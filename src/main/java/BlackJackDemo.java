@@ -28,18 +28,15 @@ public class BlackJackDemo {
         playa1.getCardHand().sumCardHand();
         dealer.getDealerCardHand().sumCardHand();
 
-         String twentyOneCheck = gameRules.checkAllPlayersHandsForTwentyOne(playa1, dealer);
+        System.out.println(dealer.getDealerCardHand().getTotalHandSum());
 
-        System.out.println(twentyOneCheck);
+        //TODO: Clean this up and refactor into a separate method in MenuOptions
+        boolean continuePrompt = true;
 
-        if (twentyOneCheck.equals("neitherHaveTwentyOne")){
-
-            boolean continuePrompt = true;
-
-            do{
+        do {
             String menuOptionNumber = menuOptions.hitOrStayOption();
 
-            switch (menuOptionNumber){
+            switch (menuOptionNumber) {
                 case "1":
                     Card newCard = dealer.getCardOnTopOfDeck();
                     playa1.getCardHand().addCardToHand(newCard);
@@ -51,14 +48,13 @@ public class BlackJackDemo {
                     dealer.getDealerCardHand().showPlayerHand();
 
                     playa1.getCardHand().showPlayerHand();
-
-
                     break;
                 case "2":
-                        continuePrompt = false;
+                    gameRules.dealerDealsOwnHandWhenUnderSeventeen(dealer);
+                    continuePrompt = false;
                     break;
                 case "3":
-                        continuePrompt = false;
+                    continuePrompt = false;
                     break;
                 default:
                     System.out.println("Not a valid option. Try again");
@@ -67,9 +63,17 @@ public class BlackJackDemo {
             }
 
 
-        }while(playa1.getCardHand().getTotalHandSum() < 21 || continuePrompt);
-        }
+        } while (playa1.getCardHand().getTotalHandSum() < 21 || continuePrompt);
+
+
+        String twentyOneCheck = gameRules.checkAllPlayersHandsForTwentyOne(playa1, dealer);
+        System.out.println("Your hand total" + playa1.getCardHand().getTotalHandSum());
+        System.out.println("Dealer hand total " + dealer.getDealerCardHand().getTotalHandSum());
+
+        System.out.println(twentyOneCheck);
+
 
     }
+
 
 }

@@ -57,6 +57,14 @@ public class Dealer {
 
   }
 
+  public void dealOwnHandUnderSeventeen(){
+        do{
+            dealerCardHand.addCardToHand(getCardOnTopOfDeck());
+            dealerCardHand.sumCardHand();
+            dealerCardHand.showPlayerHand();
+        }while(dealerCardHand.getTotalHandSum() < 17);
+  }
+
 
   public void dealInitialHands(Player playa1){
 
