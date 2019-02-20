@@ -47,4 +47,11 @@ public class Wallet {
     public void setChips(int chips) {
         this.chips = chips;
     }
+
+    @Override
+    public String toString() {
+        return "Wallet: " +
+                "cash money: $$" + cashMoney +
+                ", amount of  chips: " + chips;
+    }
 }

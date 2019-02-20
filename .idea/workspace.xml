@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0a8f3ab4-36c6-4b4b-8ad0-36e1f5eadf8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/BlackJackDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BlackJackDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CardHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CardHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameRules.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Wallet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CardHandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CardHandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DealerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DealerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DeckGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DeckGeneratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GameRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameRulesTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -57,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Wallet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="424">
+              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
               <folding>
                 <element signature="e#723#724#0" expanded="true" />
                 <element signature="e#755#756#0" expanded="true" />
@@ -76,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/BlackJackDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="67">
+              <caret line="112" column="104" selection-start-line="112" selection-start-column="104" selection-end-line="112" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -271,7 +264,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550692249657" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550693317039" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -361,7 +354,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550503302327</updated>
-      <workItem from="1550503306553" duration="40249000" />
+      <workItem from="1550503306553" duration="41396000" />
     </task>
     <servers />
   </component>
@@ -398,7 +391,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40249000" />
+    <option name="totallyTimeSpent" value="41396000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="812" extended-state="6" />
@@ -411,7 +404,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" weight="0.32916668" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49785408" weight="0.2611111" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49785408" weight="0.14722222" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5035765" side_tool="true" weight="0.6625" />
       <window_info anchor="bottom" id="Messages" sideWeight="0.49928468" weight="0.32777777" />
@@ -419,7 +412,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49642345" visible="true" weight="0.8736111" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49642345" visible="true" weight="0.9583333" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -653,8 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Wallet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="424">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
           <folding>
             <element signature="e#723#724#0" expanded="true" />
             <element signature="e#755#756#0" expanded="true" />
@@ -694,8 +687,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BlackJackDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="67">
+          <caret line="112" column="104" selection-start-line="112" selection-start-column="104" selection-end-line="112" selection-end-column="104" />
         </state>
       </provider>
     </entry>
