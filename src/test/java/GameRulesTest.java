@@ -110,4 +110,36 @@ public class GameRulesTest {
         assertEquals("neitherHaveTwentyOne", actualStringReturned);
     }
 
+    @Test
+    public void shouldSubtractTenFromCardHandTotalIfAcesPresentAndOverTwentyOne(){
+        CardHand testPlayerHand = new CardHand();
+        ArrayList<Card> playaHand = new ArrayList<>(Arrays.asList(new Card("Ace", "Diamonds")
+                , new Card("Ace", "Spades"), new Card("Ace", "Diamonds") ));
+        testPlayerHand.setHand(playaHand);
+        testPlayerHand.sumCardHand();
+        ArrayList<Card> dealerHand = new ArrayList<>(Arrays.asList(new Card("Ace", "Clubs")
+                , new Card("Ace", "Hearts"), new Card("King", "Diamonds") ));
+
+        CardHand testDealerHand = new CardHand();
+        testDealerHand.setHand(dealerHand);
+        testDealerHand.sumCardHand();
+
+        Player playa1 = new Player("G-Boomin");
+        Dealer dealer1 = new Dealer();
+        playa1.setCardHand(testPlayerHand);
+        dealer1.setDealerCardHand(testDealerHand);
+
+        gameRules.accountForAceValueVariation(playa1, dealer1);
+
+        int expectedPlayaTotal = 13;
+        int expectedDealerTotal = 12;
+
+        int actualPlayaTotal = playa1.getCardHand().getTotalHandSum();
+        int actualDealerTotal = dealer1.getDealerCardHand().getTotalHandSum();
+
+        assertEquals(expectedPlayaTotal, actualPlayaTotal);
+        assertEquals(expectedDealerTotal, actualDealerTotal);
+
+    }
+
 }

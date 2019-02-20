@@ -49,6 +49,30 @@ public class CardHand {
 
     }
 
+    public void adjustHandTotalForAces(){
+        int numberOfAcesInHand = getTotalAcesInHand();
+
+        for(int i = 0; i <= numberOfAcesInHand; i++){
+            if(getTotalHandSum() > 21){
+                setTotalHandSum(getTotalHandSum() - 10);
+            }
+        }
+
+    }
+
+    private int getTotalAcesInHand(){
+
+        int aceTotal = 0;
+
+        for(Card card: hand){
+            if(card.getRank().equalsIgnoreCase("Ace")){
+                aceTotal += 1;
+            }
+        }
+
+        return aceTotal;
+    }
+
         private int getCardNumericalValue(String rank){
 
             int card = 0;

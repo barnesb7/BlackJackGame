@@ -29,6 +29,9 @@ private boolean checkCardHandForTwentyOne(int handTotal){
     return handTotal == 21;
 }
 
-
+public void accountForAceValueVariation(Player playa, Dealer dealer){
+    playa.getCardHand().adjustHandTotalForAces();
+    dealer.getDealerCardHand().adjustHandTotalForAces();
+}
 
 }
