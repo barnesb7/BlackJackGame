@@ -24,9 +24,10 @@ public class BlackJackDemo {
 
             switch (menuOption) {
                 case "1":
-                    double initialBet = menuOptions.askForInitialBet();
-                    dealer.dealInitialHands(playa1);
 
+                    double initialBet = menuOptions.askForInitialBet();
+                    playa1.setCardHand(new CardHand());
+                    dealer.dealInitialHands(playa1);
 
                     dealer.getDealerCardHand().showDealerHidden2ndCard();
                     playa1.getCardHand().showPlayerHand();
@@ -44,7 +45,9 @@ public class BlackJackDemo {
 
                         switch (menuOptionNumber) {
                             case "1":
+
                                 Card newCard = dealer.getCardOnTopOfDeck();
+
                                 playa1.getCardHand().addCardToHand(newCard);
 
                                 System.out.println("Dealer pulled a " + newCard);
@@ -90,7 +93,11 @@ public class BlackJackDemo {
                     } else if (twentyOneCheck == 2) {
                         System.out.println("You lost to the dealer: " + finalDealerScore + " to " + finalPlayaScore);
                         playa1.getWallet().subtractChipsFromWalletAfterALoss(initialBet);
-                    } else {
+                    } else if(twentyOneCheck == 4){
+                        System.out.println("You bust! " + finalPlayaScore );
+                        playa1.getWallet().subtractChipsFromWalletAfterALoss(initialBet);
+                    }
+                    else {
                         System.out.println("You tied the dealer: " + finalDealerScore + " to " + finalPlayaScore);
                     }
 

@@ -7,17 +7,16 @@ public class CardHand {
 
     private ArrayList<Card> hand;
 
-    public CardHand(){
+    public CardHand() {
         this.hand = new ArrayList<>();
     }
 
-    public void showDealerHidden2ndCard(){
+    public void showDealerHidden2ndCard() {
         System.out.println("----DEALER'S HAND----");
-        for(int i = 0; i < hand.size(); i++){
-            if(i == 1){
+        for (int i = 0; i < hand.size(); i++) {
+            if (i == 1) {
                 System.out.println("[Hidden card]");
-            }
-            else{
+            } else {
                 System.out.println(hand.get(i));
             }
 
@@ -26,26 +25,26 @@ public class CardHand {
 
     }
 
-    public void showPlayerHand(){
+    public void showPlayerHand() {
         System.out.println("----YOUR HAND----");
-        for(Card card : hand){
+        for (Card card : hand) {
 
             System.out.println(card);
         }
 
-        System.out.println( " ");
+        System.out.println(" ");
 
     }
 
 
-    public void showDealerHand(){
+    public void showDealerHand() {
         System.out.println("----DEALER HAND----");
-        for(Card card : hand){
+        for (Card card : hand) {
 
             System.out.println(card);
         }
 
-        System.out.println( " ");
+        System.out.println(" ");
 
     }
 
@@ -54,30 +53,33 @@ public class CardHand {
         int cardSum = 0;
 
         for (Card card : hand) {
+
             cardSum += getCardNumericalValue(card.getRank());
         }
-         setTotalHandSum(cardSum);
+
+        setTotalHandSum(cardSum);
+
 
         adjustHandTotalForAces();
     }
 
-    private void adjustHandTotalForAces(){
+    private void adjustHandTotalForAces() {
         int numberOfAcesInHand = getTotalAcesInHand();
-
-        for(int i = 0; i <= numberOfAcesInHand; i++){
-            if(getTotalHandSum() > 21){
-                setTotalHandSum(getTotalHandSum() - 10);
+        if (numberOfAcesInHand != 0) {
+            for (int i = 0; i <= numberOfAcesInHand; i++) {
+                if (getTotalHandSum() > 21) {
+                    setTotalHandSum(getTotalHandSum() - 10);
+                }
             }
         }
-
     }
 
-    private int getTotalAcesInHand(){
+    private int getTotalAcesInHand() {
 
         int aceTotal = 0;
 
-        for(Card card: hand){
-            if(card.getRank().equalsIgnoreCase("Ace")){
+        for (Card card : hand) {
+            if (card.getRank().equalsIgnoreCase("Ace")) {
                 aceTotal += 1;
             }
         }
@@ -85,35 +87,32 @@ public class CardHand {
         return aceTotal;
     }
 
-        private int getCardNumericalValue(String rank){
+    private int getCardNumericalValue(String rank) {
 
-            int card = 0;
+        int card = 0;
 
 
-            if(rank.equalsIgnoreCase("jack")){
+        if (rank.equalsIgnoreCase("jack")) {
 
-                card = 10;
+            card = 10;
 
-            } else if(rank.equalsIgnoreCase("queen")){
-                card =10;
+        } else if (rank.equalsIgnoreCase("queen")) {
+            card = 10;
 
-            } else if (rank.equalsIgnoreCase("king")){
+        } else if (rank.equalsIgnoreCase("king")) {
 
-                card =10;
+            card = 10;
 
-            } else if(rank.equalsIgnoreCase("ace")){
-                card = 11;
-            }
-            else {
+        } else if (rank.equalsIgnoreCase("ace")) {
+            card = 11;
+        } else {
 
-                card = Integer.parseInt(rank);
-            }
-
-            return card;
-
+            card = Integer.parseInt(rank);
         }
 
+        return card;
 
+    }
 
 
     public ArrayList<Card> getHand() {
@@ -125,8 +124,7 @@ public class CardHand {
     }
 
 
-
-    public void addCardToHand(Card card1){
+    public void addCardToHand(Card card1) {
         this.hand.add(card1);
     }
 
