@@ -8,72 +8,96 @@ public class BlackJackDemo {
         GameRules gameRules = new GameRules();
         Dealer dealer = new Dealer();
         dealer.shuffleAllDecks();
-//
-//      for(Deck deck: dealer.getDecks()){
-//
-//      System.out.println(deck.getDeck());
-//      }
+        boolean continueGame = true;
 
         menuOptions.showBadAssAsciiHand();
         String playerName = menuOptions.returnPlayersName();
 
-        Player playa1 = menuOptions.createNewPlayer(playerName);
-        double initialBet = menuOptions.askForInitialBet();
-        dealer.dealInitialHands(playa1);
+
+//
+//            System.out.println("[1] To play a hand of black jack");
+//            System.out.println("[2] Cash out");
+//            System.out.println("[3] Exit");
+//            int menuOption = scanner.nextInt();
 
 
-        dealer.getDealerCardHand().showDealerHidden2ndCard();
-        playa1.getCardHand().showPlayerHand();
+            Player playa1 = menuOptions.createNewPlayer(playerName);
+            double initialBet = menuOptions.askForInitialBet();
+            dealer.dealInitialHands(playa1);
 
-        playa1.getCardHand().sumCardHand();
-        dealer.getDealerCardHand().sumCardHand();
 
-        System.out.println(dealer.getDealerCardHand().getTotalHandSum());
+            dealer.getDealerCardHand().showDealerHidden2ndCard();
+            playa1.getCardHand().showPlayerHand();
 
-        //TODO: Clean this up and refactor into a separate method in MenuOptions
-        boolean continuePrompt = true;
+            playa1.getCardHand().sumCardHandAccountingForAces();
+            dealer.getDealerCardHand().sumCardHandAccountingForAces();
 
-        do {
-            String menuOptionNumber = menuOptions.hitOrStayOption();
+            System.out.println(dealer.getDealerCardHand().getTotalHandSum());
 
-            switch (menuOptionNumber) {
-                case "1":
-                    Card newCard = dealer.getCardOnTopOfDeck();
-                    playa1.getCardHand().addCardToHand(newCard);
+            //TODO: Clean this up and refactor into a separate method in MenuOptions
+            boolean continuePrompt = true;
 
-                    System.out.println("Dealer pulled a " + newCard);
+            do {
+                String menuOptionNumber = menuOptions.hitOrStayOption();
 
-                    playa1.getCardHand().sumCardHand();
+                switch (menuOptionNumber) {
+                    case "1":
+                        Card newCard = dealer.getCardOnTopOfDeck();
+                        playa1.getCardHand().addCardToHand(newCard);
 
-                    dealer.getDealerCardHand().showPlayerHand();
+                        System.out.println("Dealer pulled a " + newCard);
 
-                    playa1.getCardHand().showPlayerHand();
-                    break;
-                case "2":
-                    gameRules.dealerDealsOwnHandWhenUnderSeventeen(dealer);
-                    continuePrompt = false;
-                    break;
-                case "3":
-                    continuePrompt = false;
-                    break;
-                default:
-                    System.out.println("Not a valid option. Try again");
-                    break;
+                        playa1.getCardHand().sumCardHandAccountingForAces();
+
+                        dealer.getDealerCardHand().showDealerHidden2ndCard();
+
+                        playa1.getCardHand().showPlayerHand();
+                        break;
+                    case "2":
+
+                        continuePrompt = false;
+                        break;
+                    case "3":
+                        continuePrompt = false;
+                        break;
+                    default:
+                        System.out.println("Not a valid option. Try again");
+                        break;
+
+                }
+
+
+            } while (continuePrompt);
+
+
+            gameRules.dealerDealsOwnHandWhenUnderSeventeen(dealer);
+
+            int twentyOneCheck = gameRules.checkAllPlayersHandsForWin(playa1, dealer);
+
+            int finalPlayaScore = playa1.getCardHand().getTotalHandSum();
+            int finalDealerScore = dealer.getDealerCardHand().getTotalHandSum();
+
+            if (twentyOneCheck == 0) {
+                System.out.println("You won with a 21!! ");
+                playa1.getWallet().addWinningsChips((initialBet * 2));
+            } else if (twentyOneCheck == 1) {
+                System.out.println("You won with a " + finalPlayaScore + " to " + finalDealerScore + "!!!");
+                playa1.getWallet().addWinningsChips(initialBet);
+            } else if (twentyOneCheck == 2) {
+                System.out.println("You lost to the dealer: " + finalDealerScore + " to " + finalPlayaScore);
+                playa1.getWallet().subtractChipsFromWalletAfterALoss(initialBet);
+            } else {
+                System.out.println("You tied the dealer: " + finalDealerScore + " to " + finalPlayaScore);
+            }
+
+            double playa1CashMoney = playa1.getWallet().getCashMoney();
+            int playa1Chips = playa1.getWallet().getChips();
+
+            System.out.println("Yor wallet now has " + playa1Chips + " chips and $" + playa1CashMoney);
 
             }
 
 
-        } while (playa1.getCardHand().getTotalHandSum() < 21 || continuePrompt);
-
-
-        String twentyOneCheck = gameRules.checkAllPlayersHandsForTwentyOne(playa1, dealer);
-        System.out.println("Your hand total" + playa1.getCardHand().getTotalHandSum());
-        System.out.println("Dealer hand total " + dealer.getDealerCardHand().getTotalHandSum());
-
-        System.out.println(twentyOneCheck);
-
 
     }
 
-
-}

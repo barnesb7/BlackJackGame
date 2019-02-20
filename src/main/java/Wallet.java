@@ -9,7 +9,11 @@ public class Wallet {
     }
 
     public void addCashMoney(int chips){
-       cashMoney += (chips * 10);
+
+        cashMoney += (chips * 10);
+
+        this.chips = 0;
+
     }
 
     public void addWinningsChips(double winningsMoney){

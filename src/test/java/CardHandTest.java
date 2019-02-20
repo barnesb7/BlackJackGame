@@ -38,7 +38,7 @@ public class CardHandTest {
         testCardHand.setHand(testHand);
 
         int expectedSum = 26;
-        testCardHand.sumCardHand();
+        testCardHand.sumCardHandAccountingForAces();
         int actualSum = testCardHand.getTotalHandSum();
 
         assertEquals(expectedSum, actualSum);

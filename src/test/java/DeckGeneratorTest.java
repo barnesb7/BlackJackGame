@@ -19,7 +19,7 @@ public class DeckGeneratorTest {
     @Test
     public void makeADeck() {
 
-        Card expectedFirstCard = new Card("Two", "Clubs");
+        Card expectedFirstCard = new Card("2", "Clubs");
 
         Deck actualDeckReturned = testDeckGenerator.makeADeck();
 

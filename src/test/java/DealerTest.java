@@ -33,7 +33,7 @@ public class DealerTest {
        String actualCardSuit = actualCard.getSuit();
        String actualCardRank = actualCard.getRank();
 
-       assertEquals("Two", actualCardRank);
+       assertEquals("2", actualCardRank);
        assertEquals("Clubs", actualCardSuit);
 
     }

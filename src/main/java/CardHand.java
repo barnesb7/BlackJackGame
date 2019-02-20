@@ -38,7 +38,18 @@ public class CardHand {
     }
 
 
-    public void sumCardHand() {
+    public void showDealerHand(){
+        System.out.println("----DEALER HAND----");
+        for(Card card : hand){
+
+            System.out.println(card);
+        }
+
+        System.out.println( " ");
+
+    }
+
+    public void sumCardHandAccountingForAces() {
 
         int cardSum = 0;
 
@@ -47,9 +58,10 @@ public class CardHand {
         }
          setTotalHandSum(cardSum);
 
+        adjustHandTotalForAces();
     }
 
-    public void adjustHandTotalForAces(){
+    private void adjustHandTotalForAces(){
         int numberOfAcesInHand = getTotalAcesInHand();
 
         for(int i = 0; i <= numberOfAcesInHand; i++){

@@ -58,11 +58,13 @@ public class Dealer {
   }
 
   public void dealOwnHandUnderSeventeen(){
-        do{
+
+      while(dealerCardHand.getTotalHandSum() < 17){
             dealerCardHand.addCardToHand(getCardOnTopOfDeck());
-            dealerCardHand.sumCardHand();
-            dealerCardHand.showPlayerHand();
-        }while(dealerCardHand.getTotalHandSum() < 17);
+            dealerCardHand.sumCardHandAccountingForAces();
+        }
+
+      dealerCardHand.showDealerHand();
   }
 
 
@@ -80,11 +82,10 @@ public class Dealer {
       playa1.getCardHand().addCardToHand(getCardOnTopOfDeck());
   }
 
+
   public void dealCardForDealerHit(){
       dealerCardHand.addCardToHand(getCardOnTopOfDeck());
   }
-
-
 
     @Override
     public String toString() {
